@@ -1,4 +1,4 @@
-
+const divEl = document.getElementById("container")
 // crea un array che genera 5 numeri casuali
 let numeriDaIndovinare = []
 
@@ -14,8 +14,10 @@ while (numeriDaIndovinare.length < 5) {
 console.log(numeriDaIndovinare);
 // questo array vine esposto al utente 
 
-alert("memorizza questi 5 numeri, hai 10 secondi di tempo" + numeriDaIndovinare );
+divEl.innerHTML = 'memorizza questi 5 numeri, hai 10 secondi di tempo' + numeriDaIndovinare ;
+
 // inizializzo la funzione della richiesta dei numeri con 10 secondi di ritardo
+setTimeout(svuota,4000)
 setTimeout(requestNum, 5000);
 setTimeout(risultato, 6000);
 // da li l'utente ha 10 secondi per inserire i numeri corretti
@@ -42,22 +44,33 @@ function risultato() {
     
 
   if (userNum.length == 0) {
-    console.log(" hai indovinato 0 su 5"); 
+    console.log(" hai indovinato 0 su 5");
+    divEl.innerHTML = " hai indovinato 0 su 5"
     
   } else if (userNum == 1) {
      console.log(" hai indovinato 1 su 5"); 
+     divEl.innerHTML = " hai indovinato 1 su 5"
     
   } else if (userNum == 2) {
-     console.log(" hai indovinato 2 su 5"); 
+     console.log(" hai indovinato 2 su 5");
+     divEl.innerHTML = " hai indovinato 2 su 5"
     
   } else if (userNum == 3) {
-     console.log(" hai indovinato 3 su 5"); 
+     console.log(" hai indovinato 3 su 5");
+     divEl.innerHTML = " hai indovinato 3 su 5" 
     
   } else if (userNum == 4) {
-    console.log(" hai indovinato 4 su 5"); 
+    console.log(" hai indovinato 4 su 5");
+    divEl.innerHTML = " hai indovinato 4 su 5" 
+
     
   } else {
-     console.log(" hai indovinato 5 su 5"); 
+     console.log(" hai indovinato 5 su 5");
+     divEl.innerHTML = " hai indovinato 5 su 5"  
  } 
 
+}
+
+function svuota() {
+    divEl.innerHTML = "";
 }

@@ -17,9 +17,9 @@ console.log(numeriDaIndovinare);
 divEl.innerHTML = 'memorizza questi 5 numeri, hai 10 secondi di tempo' + numeriDaIndovinare ;
 
 // inizializzo la funzione della richiesta dei numeri con 10 secondi di ritardo
-setTimeout(svuota,4000)
-setTimeout(requestNum, 5000);
-setTimeout(risultato, 6000);
+setTimeout(svuota,10000)
+setTimeout(requestNum, 11000);
+setTimeout(risultato, 12000);
 // da li l'utente ha 10 secondi per inserire i numeri corretti
 let userNum = [];
 

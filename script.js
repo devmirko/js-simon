@@ -1,5 +1,6 @@
+
 // crea un array che genera 5 numeri casuali
-var numeriDaIndovinare = []
+let numeriDaIndovinare = []
 
 
 while (numeriDaIndovinare.length < 5) {
@@ -15,7 +16,8 @@ console.log(numeriDaIndovinare);
 
 alert("memorizza questi 5 numeri, hai 10 secondi di tempo" + numeriDaIndovinare );
 // inizializzo la funzione della richiesta dei numeri con 10 secondi di ritardo
-setTimeout(requestNum, 10000);
+setTimeout(requestNum, 5000);
+setTimeout(risultato, 6000);
 // da li l'utente ha 10 secondi per inserire i numeri corretti
 let userNum = [];
 
@@ -25,6 +27,8 @@ function requestNum() {
         let numRichiesto = parseInt(prompt("inserisci 5 numeri"));
         if (!userNum.includes(numRichiesto) && numeriDaIndovinare.includes(numRichiesto)) {
             userNum.push(numRichiesto)
+
+  
         }
         
     }
@@ -34,3 +38,26 @@ function requestNum() {
 console.log(userNum);
 
 // a seconda della scelta dell'utente crea una funzione che stampi quanti numeri ha indovinato
+function risultato() {
+    
+
+  if (userNum.length == 0) {
+    console.log(" hai indovinato 0 su 5"); 
+    
+  } else if (userNum == 1) {
+     console.log(" hai indovinato 1 su 5"); 
+    
+  } else if (userNum == 2) {
+     console.log(" hai indovinato 2 su 5"); 
+    
+  } else if (userNum == 3) {
+     console.log(" hai indovinato 3 su 5"); 
+    
+  } else if (userNum == 4) {
+    console.log(" hai indovinato 4 su 5"); 
+    
+  } else {
+     console.log(" hai indovinato 5 su 5"); 
+ } 
+
+}
